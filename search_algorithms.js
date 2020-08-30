@@ -33,7 +33,7 @@ const bubbleSort = (arr) => {
     return arr;
 }
 
-console.log(bubbleSort(testArray));
+// console.log(bubbleSort(testArray));
 
 const insertionSort = (arr) => {
     const length = arr.length;
@@ -53,4 +53,43 @@ const insertionSort = (arr) => {
     return arr;
 }
 
-console.log(insertionSort(testArray));
+// console.log(insertionSort(testArray));
+
+const quickSort = (arr) => {
+
+    if (arr.length < 2) {
+        return arr;
+    }
+
+    const index = arr.length - 1;
+    const element = arr[index];
+    const a = [];
+    const b = [];
+    let temp;
+
+    for (let i = 0; i < index; i++) {
+        temp = arr[i];
+        temp < element ? a.push(temp) : b.push(temp);
+    }
+
+    const output = [...quickSort(a), element, ...quickSort(b)]
+    return output;
+}
+
+console.log(quickSort(testArray));
+
+const divide = (arr) => {
+    let length = arr.length;
+
+    
+
+    return arr;
+}
+
+const sort = () => {
+
+
+
+}
+
+// console.log(divide(testArray));
