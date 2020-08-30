@@ -55,29 +55,6 @@ const insertionSort = (arr) => {
 
 // console.log(insertionSort(testArray));
 
-const quickSort = (arr) => {
-
-    if (arr.length < 2) {
-        return arr;
-    }
-
-    const index = arr.length - 1;
-    const element = arr[index];
-    const a = [];
-    const b = [];
-    let temp;
-
-    for (let i = 0; i < index; i++) {
-        temp = arr[i];
-        temp < element ? a.push(temp) : b.push(temp);
-    }
-
-    const output = [...quickSort(a), element, ...quickSort(b)]
-    return output;
-}
-
-// console.log(quickSort(testArray));
-
 const divide = (arr) => {
     if (arr.length < 2) {
         return arr;
@@ -103,3 +80,26 @@ const sort = (left, right) => {
 }
 
 // console.log(divide(testArray));
+
+const quickSort = (arr) => {
+
+    if (arr.length < 2) {
+        return arr;
+    }
+
+    const index = arr.length - 1;
+    const element = arr[index];
+    const a = [];
+    const b = [];
+    let temp;
+
+    for (let i = 0; i < index; i++) {
+        temp = arr[i];
+        temp < element ? a.push(temp) : b.push(temp);
+    }
+
+    const output = [...quickSort(a), element, ...quickSort(b)]
+    return output;
+}
+
+// console.log(quickSort(testArray));
