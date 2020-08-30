@@ -76,20 +76,30 @@ const quickSort = (arr) => {
     return output;
 }
 
-console.log(quickSort(testArray));
+// console.log(quickSort(testArray));
 
 const divide = (arr) => {
-    let length = arr.length;
+    if (arr.length < 2) {
+        return arr;
+    }
 
+    const center = Math.floor(arr.length / 2);
+    const left = arr.slice(0, center);
+    const right = arr.slice(center);
     
-
-    return arr;
+    return sort(divide(left), divide(right));
 }
 
-const sort = () => {
+const sort = (left, right) => {
 
+    const result = [];
 
+    while (left.length && right.length) {
+        left[0] < right[0] ? result.push(left.shift()) : result.push(right.shift());
+    }
 
+    const output = [...result, ...left, ...right];
+    return output;
 }
 
 // console.log(divide(testArray));
