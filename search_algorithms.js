@@ -102,14 +102,27 @@ const quickSort = (arr) => {
     return output;
 }
 
+// console.log(quickSort(testArray));
+
+
 // TODO 
 // Selection Sort
 
+
+
 // Bucket Sort
+
+
 
 // Heap Sort
 
+
+
 // Counting Sort
+
+
+
 // Radix Sort
 
-// console.log(quickSort(testArray));
+
+
