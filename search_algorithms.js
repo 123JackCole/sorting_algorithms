@@ -104,8 +104,11 @@ const quickSort = (arr) => {
 
 // TODO 
 // Selection Sort
+
 // Bucket Sort
+
 // Heap Sort
+
 // Counting Sort
 // Radix Sort
 
