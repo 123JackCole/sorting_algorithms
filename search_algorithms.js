@@ -105,4 +105,5 @@ const quickSort = (arr) => {
 // console.log(quickSort(testArray));
 
 // selection sort
-// 
+// bucket sort
+// heap sort
