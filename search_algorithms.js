@@ -104,28 +104,35 @@ const quickSort = (arr) => {
 
 // console.log(quickSort(testArray));
 
-// TODO 
-// Selection Sort
-
 const selectionSort = (arr) => {
     
- 
-    
+    const length = arr.length;
+
+    for (let i = 0; i < length; i++) {
+
+        let min = i;
+        for (let j = i + 1; j < length; j++) {
+            if (arr[j] < arr[min]) min = j;
+        }
+
+        if (min !== i) swap(arr, i, min);
+    }
+
+    return arr;
+
 }
 
-// Bucket Sort
+// console.log(selectionSort(testArray));
 
 const bucketSort = (arr) => {
     
- 
+
     
 }
 
-// Heap Sort
-
 const heapSort = (arr) => {
     
- 
+
     
 }
 
@@ -133,7 +140,7 @@ const heapSort = (arr) => {
 
 const countingSort = (arr) => {
     
- 
+
     
 }
 
@@ -141,7 +148,7 @@ const countingSort = (arr) => {
 
 const radixSort = (arr) => {
     
- 
+
     
 }
 
