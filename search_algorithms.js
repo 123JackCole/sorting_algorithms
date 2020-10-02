@@ -136,15 +136,11 @@ const heapSort = (arr) => {
     
 }
 
-// Counting Sort
-
 const countingSort = (arr) => {
     
 
     
 }
-
-// Radix Sort
 
 const radixSort = (arr) => {
     
