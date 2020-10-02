@@ -107,11 +107,19 @@ const quickSort = (arr) => {
 // TODO 
 // Selection Sort
 
-
+const selectionSort = (arr) => {
+    
+ 
+    
+}
 
 // Bucket Sort
 
-
+const bucketSort = (arr) => {
+    
+ 
+    
+}
 
 // Heap Sort
 
