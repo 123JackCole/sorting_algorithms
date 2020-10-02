@@ -123,11 +123,19 @@ const bucketSort = (arr) => {
 
 // Heap Sort
 
-
+const heapSort = (arr) => {
+    
+ 
+    
+}
 
 // Counting Sort
 
-
+const countingSort = (arr) => {
+    
+ 
+    
+}
 
 // Radix Sort
 
