@@ -164,7 +164,7 @@ const countingSort = (arr, min, max) => {
     
     const [length, count] = [arr.length, []];
 
-    for (let i = min; i < length; i++) {
+    for (let i = min; i <= max; i++) {
         count[i] = 0;
     }
 
@@ -172,8 +172,8 @@ const countingSort = (arr, min, max) => {
         count[arr[i]]++; 
     }
 
-    for (i = min; i <= max; i++) {
-        let j = 0;
+    let j = 0;
+    for (let i = min; i <= max; i++) {
         while (count[i] > 0) {
             arr[j] = i;
             j++;
