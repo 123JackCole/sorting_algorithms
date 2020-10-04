@@ -186,11 +186,3 @@ const countingSort = (arr, min, max) => {
 }
 
 console.log(countingSort(testArray, 1, 10));
-
-const radixSort = (arr) => {
-    
-
-    
-}
-
-// console.log(radixSort(testArray));
