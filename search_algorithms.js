@@ -124,23 +124,35 @@ const selectionSort = (arr) => {
 
 // console.log(selectionSort(testArray));
 
-const bucketSort = (arr) => {
+const bucketSort = (arr, bucketSize = 4) => {
     
-    const [length, buckets, sorted] = [arr.length, [], []];
+    const length = arr.length;
+    let [min, max] = [arr[0], arr[0]];
 
-    for (let i = 0; i < length; i++) {
-        buckets[i] = 0;
+    for (let i = 1; i < length; i++) {
+        if (arr[i] < min) min = arr[i];
+        if (arr[i] > max) max = arr[i];
+    }
+
+    const bucketCount = Math.floor((max - min) / bucketSize) + 1,
+          buckets = [];
+
+    for (let i = 0; i < bucketCount; i++) {
+        buckets[i] = [];
     }
 
     for (let i = 0; i < length; i++) {
-        const index = Math.floor(length * arr[i] / 10);
+        const index = Math.floor((arr[i] - min) / bucketSize);
         buckets[index].push(arr[i]);
     }
 
-    buckets.forEach(bucket => {
-        insertionSort(bucket);
-        bucket.forEach(element => sorted.push(element))
-    })
+    const sorted = [];
+    for (let i = 0; i < buckets.length; i++) {
+        if (buckets[i]) {
+            insertionSort(buckets[i]);
+            sorted.push(...buckets[i]);
+        }   
+    }
     
     return sorted;
 
@@ -173,7 +185,7 @@ const countingSort = (arr, min, max) => {
     
 }
 
-// console.log(countingSort(testArray));
+console.log(countingSort(testArray, 1, 10));
 
 const radixSort = (arr) => {
     
