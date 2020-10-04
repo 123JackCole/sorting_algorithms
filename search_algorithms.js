@@ -148,17 +148,28 @@ const bucketSort = (arr) => {
 
 // console.log(bucketSort(testArray));
 
-const heapSort = (arr) => {
+const countingSort = (arr, min, max) => {
     
+    const [length, count] = [arr.length, []];
 
-    
-}
+    for (let i = min; i < length; i++) {
+        count[i] = 0;
+    }
 
-// console.log(heapSort(testArray));
+    for (let i = 0; i < length; i++) {
+        count[arr[i]]++; 
+    }
 
-const countingSort = (arr) => {
-    
+    for (i = min; i <= max; i++) {
+        let j = 0;
+        while (count[i] > 0) {
+            arr[j] = i;
+            j++;
+            count[i]--;
+        }
+    }
 
+    return arr;
     
 }
 
