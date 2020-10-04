@@ -126,9 +126,27 @@ const selectionSort = (arr) => {
 
 const bucketSort = (arr) => {
     
+    const [length, buckets, sorted] = [arr.length, [], []];
 
+    for (let i = 0; i < length; i++) {
+        buckets[i] = 0;
+    }
+
+    for (let i = 0; i < length; i++) {
+        const index = Math.floor(length * arr[i] / 10);
+        buckets[index].push(arr[i]);
+    }
+
+    buckets.forEach(bucket => {
+        insertionSort(bucket);
+        bucket.forEach(element => sorted.push(element))
+    })
     
+    return sorted;
+
 }
+
+// console.log(bucketSort(testArray));
 
 const heapSort = (arr) => {
     
@@ -136,11 +154,15 @@ const heapSort = (arr) => {
     
 }
 
+// console.log(heapSort(testArray));
+
 const countingSort = (arr) => {
     
 
     
 }
+
+// console.log(countingSort(testArray));
 
 const radixSort = (arr) => {
     
@@ -148,3 +170,4 @@ const radixSort = (arr) => {
     
 }
 
+// console.log(radixSort(testArray));
